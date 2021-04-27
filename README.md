@@ -4,3 +4,5 @@
 
 ### Usage
 ``python exploit.py https://domain.com LHOST PORT``
+
+``d``

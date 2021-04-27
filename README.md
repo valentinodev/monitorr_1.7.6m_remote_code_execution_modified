@@ -3,4 +3,4 @@
 
 
 ### Usage
-``python exploit.py https://monitorr.robyns-petshop.thm 10.6.27.220 443``
+``python exploit.py https://domain.com 10.6.27.220 443``

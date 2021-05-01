@@ -16,4 +16,4 @@
 ``python 48980.py https://domain.com LHOST PORT``
 
 
-## CC TO LYHIN'S LAB
+## Credits to LYHIN'S LAB

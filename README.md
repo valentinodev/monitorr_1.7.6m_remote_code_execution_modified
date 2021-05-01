@@ -1,6 +1,6 @@
 # Monitorr 1.7.6m Remote Code Execution (Unauthenticated)
 ## Modified Version by valent1ne
-
+## Credits to LYHIN'S LAB (https://www.exploit-db.com/exploits/48980)
 
 ### Installation
 ``git clone https://github.com/valentinodev/monitorr_1.7.6m_rce.git``
@@ -16,4 +16,3 @@
 ``python 48980.py https://domain.com LHOST PORT``
 
 
-## Credits to LYHIN'S LAB

